@@ -40,6 +40,17 @@ app.get('/messages', async (req, res) => {
   }
 })
 
+app.get('/about', (req, res) => {
+  res.json({
+    title: 'About Me',
+    paragraph1:
+      "I'm Manasa, a senior at NYU studying computer science with minors in economics and public policy. I grew up in the Bay Area, and I lived in California my entire life up until college. Professionally, I'm interested in working in a space that connects technology with social impact.",
+    paragraph2:
+      'Some of my interests include tennis, running (a fun fact is that I ran my first marathon this summer), and exploring restaurants/coffee shops in the city. I also love rewatching sitcoms, spending time outdoors, and (recently) cooking.',
+    imageUrl: '/about-photo.JPG',
+  })
+})
+
 // a route to handle fetching a single message by its id
 app.get('/messages/:messageId', async (req, res) => {
   // load all messages from database
